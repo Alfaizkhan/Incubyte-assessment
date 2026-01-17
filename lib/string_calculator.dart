@@ -9,9 +9,15 @@ int add(String numbers) {
   if (numbers.startsWith("//")) {
     var parts = numbers.split("\n");
     delimiter = parts[0].substring(2);
-    input = parts[1]; // Get the remaining of the string
+    input = parts[1];
   }
 
-  List<String> parts = input.split(delimiter);
-  return parts.map(int.parse).reduce((a, b) => a + b);
+  var num = input.split(delimiter).map(int.parse).toList();
+
+  var negatives = num.where((n) => n < 0).toList();
+  if (negatives.isNotEmpty) {
+    throw Exception("negative numbers not allowed ${negatives.join(', ')}");
+  }
+
+  return num.reduce((a, b) => a + b);
 }
