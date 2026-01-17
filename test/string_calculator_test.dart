@@ -13,4 +13,8 @@ void main() {
   test('should return sum of two numbers', () {
     expect(add("1,5"), equals(6));
   });
+
+  test('should handle any amount of numbers', () {
+    expect(add("1,2,3,4,5"), equals(15));
+  });
 }
