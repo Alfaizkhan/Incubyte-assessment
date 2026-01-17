@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/incubyte_assessment.iml" filepath="$PROJECT_DIR$/incubyte_assessment.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/incubyte_assessment_android.iml" filepath="$PROJECT_DIR$/android/incubyte_assessment_android.iml" />
     </modules>
   </component>
 </project>
